@@ -58,12 +58,11 @@ void * nextList(List * list) {
 }
 
 void * lastList(List * list) {
-  if (list->tail == NULL)
+  if (list->current == NULL)
   {
     return NULL;
   }
-  void * temp = list->tail->data;
-  list->current = list->tail;
+  void * temp = list->current->data;
     return temp;
 }
 
