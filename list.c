@@ -29,26 +29,52 @@ Node * createNode(void * data) {
 }
 
 List * createList() {
-     return NULL;
+  List * lista = (List *) malloc(sizeof(List));
+  lista->head = NULL;
+  lista->tail = NULL;
+  lista->current = NULL;
+  return lista;
+    
 }
 
 void * firstList(List * list) {
-    return NULL;
+    list->current = list->head;
+    return list->head;
 }
 
 void * nextList(List * list) {
+  if (list->current == NULL)
+  {
     return NULL;
+  }
+  list->current = current->next
+  return list->current
 }
 
 void * lastList(List * list) {
-    return NULL;
+    return list->tail;
 }
 
 void * prevList(List * list) {
-    return NULL;
+  list->current = current->prev
+  return list->current;
 }
 
 void pushFront(List * list, void * data) {
+  Node * nuevo_nodo = createNode(data);
+  if (list->head == NULL)
+  {
+    list->head = nuevo_nodo;
+    list->tail = nuevo_nodo;
+    list->current = nuevo_nodo;
+  }
+  else
+  {
+    nuevo_nodo->next = list->head;
+    list->head->prev = nuevo_nodo;
+    nuevo_nodo = list->head;
+    list->current = nuevo_nodo
+  }
 }
 
 void pushBack(List * list, void * data) {
@@ -57,6 +83,17 @@ void pushBack(List * list, void * data) {
 }
 
 void pushCurrent(List * list, void * data) {
+  Node * nuevo_nodo = createNode(data);
+  if (list->current == NULL)
+  {
+    list->head = nuevo_nodo;
+    list->current = list->head;
+  }
+  else
+  {
+    list->current->next = nuevo_nodo;
+    nuevo_nodo->prev = list->current;
+  }
 }
 
 void * popFront(List * list) {
@@ -70,7 +107,29 @@ void * popBack(List * list) {
 }
 
 void * popCurrent(List * list) {
+  if (list->current == NULL)
+  {
     return NULL;
+  }
+  else
+  {
+    if (list->current == list->head)
+    {
+      temp = list->head->data
+      list->head = NULL;
+      list->tail = NULL;
+      list->current = NULL;
+      return temp;
+    }
+    else
+    {
+      temp = list->current->data;
+      list->current->prev->next = list->current->next;
+      list->current->next->prev = list->current->prev;
+      list->current = list->current->next
+      return temp;
+    }
+  }
 }
 
 void cleanList(List * list) {

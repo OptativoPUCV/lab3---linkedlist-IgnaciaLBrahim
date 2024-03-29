@@ -1,0 +1,65 @@
+Fri 29 Mar 2024 03:48:56 AM UTC: 
+ list.c | 67 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++----
+ 1 file changed, 63 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:50:19: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   50 |   list->current = current->next
+      |                   ^~~~~~~
+      |                   popCurrent
+list.c:50:19: note: each undeclared identifier is reported only once for each function it appears in
+list.c:50:32: error: expected ‘;’ before ‘return’
+   50 |   list->current = current->next
+      |                                ^
+      |                                ;
+   51 |   return list->current
+      |   ~~~~~~                        
+list.c: In function ‘prevList’:
+list.c:59:19: error: ‘current’ undeclared (first use in this function); did you mean ‘popCurrent’?
+   59 |   list->current = current->prev
+      |                   ^~~~~~~
+      |                   popCurrent
+list.c:59:32: error: expected ‘;’ before ‘return’
+   59 |   list->current = current->prev
+      |                                ^
+      |                                ;
+   60 |   return list->current;
+      |   ~~~~~~                        
+list.c: In function ‘pushFront’:
+list.c:76:31: error: expected ‘;’ before ‘}’ token
+   76 |     list->current = nuevo_nodo
+      |                               ^
+      |                               ;
+   77 |   }
+      |   ~                            
+list.c: In function ‘popCurrent’:
+list.c:118:7: error: ‘temp’ undeclared (first use in this function)
+  118 |       temp = list->head->data
+      |       ^~~~
+list.c:118:30: error: expected ‘;’ before ‘list’
+  118 |       temp = list->head->data
+      |                              ^
+      |                              ;
+  119 |       list->head = NULL;
+      |       ~~~~                    
+list.c:129:42: error: expected ‘;’ before ‘return’
+  129 |       list->current = list->current->next
+      |                                          ^
+      |                                          ;
+  130 |       return temp;
+      |       ~~~~~~                              
+list.c: In function ‘nextList’:
+list.c:52:1: error: control reaches end of non-void function [-Werror=return-type]
+   52 | }
+      | ^
+list.c: In function ‘prevList’:
+list.c:61:1: error: control reaches end of non-void function [-Werror=return-type]
+   61 | }
+      | ^
+list.c: In function ‘popCurrent’:
+list.c:133:1: error: control reaches end of non-void function [-Werror=return-type]
+  133 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e7ce5cd
