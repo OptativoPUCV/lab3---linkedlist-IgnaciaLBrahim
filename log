@@ -260,3 +260,15 @@ list.c:172:1: error: expected identifier or ‘(’ before ‘}’ token
       | ^
 Compilation failed
 219d17f
+Fri 29 Mar 2024 04:25:31 AM UTC: 
+ list.c | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+In file included from test.c:5:
+list.c:162:3: error: expected identifier or ‘(’ before ‘}’ token
+  162 |   }
+      |   ^
+list.c:163:1: error: expected identifier or ‘(’ before ‘}’ token
+  163 | }
+      | ^
+Compilation failed
+74dbf40
