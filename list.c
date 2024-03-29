@@ -152,14 +152,16 @@ void * popCurrent(List * list) {
         list->head->prev = NULL;
         return temp;
       }
-      }
+      else
+      {
       void * temp = list->current->data;
       list->current->prev->next = list->current->next;
       list->current->next->prev = list->current->prev;
       list->current = list->current->next;
       return temp;
+      }
     }
-  }
+
 }
 
 void cleanList(List * list) {
