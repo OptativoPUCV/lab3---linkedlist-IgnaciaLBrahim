@@ -60,7 +60,7 @@ void * nextList(List * list) {
 void * lastList(List * list) {
   if (list->tail == NULL)
   {
-    return NULL
+    return NULL;
   }
   void * temp = list->tail->data;
     return temp;
