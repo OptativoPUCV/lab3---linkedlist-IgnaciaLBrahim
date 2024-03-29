@@ -138,3 +138,13 @@ Fri 29 Mar 2024 03:58:13 AM UTC:
  tests:  5|4
 total_score: 25/70
 d903f72
+Fri 29 Mar 2024 03:59:11 AM UTC: 
+ list.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:64:3: error: expected ‘;’ before ‘}’ token
+   64 |   }
+      |   ^
+Compilation failed
+5f18dae
