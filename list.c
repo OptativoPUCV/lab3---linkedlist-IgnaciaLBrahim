@@ -62,7 +62,8 @@ void * lastList(List * list) {
   {
     return NULL
   }
-    return list->tail->data;
+  void * temp = list->tail->data;
+    return temp;
 }
 
 void * prevList(List * list) {

@@ -148,3 +148,13 @@ list.c:64:3: error: expected ‘;’ before ‘}’ token
       |   ^
 Compilation failed
 5f18dae
+Fri 29 Mar 2024 03:59:53 AM UTC: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:64:3: error: expected ‘;’ before ‘}’ token
+   64 |   }
+      |   ^
+Compilation failed
+e8f9532
