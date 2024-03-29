@@ -194,3 +194,13 @@ Fri 29 Mar 2024 04:08:12 AM UTC:
  tests:  9|3
 total_score: 35/70
 2de33a3
+Fri 29 Mar 2024 04:09:31 AM UTC: 
+ list.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+list.c: In function ‘pushFront’:
+list.c:90:9: error: ‘List’ {aka ‘struct List’} has no member named ‘head_prev’
+   90 |     list->head_prev = nuevo_nodo;
+      |         ^~
+Compilation failed
+21bfe73
