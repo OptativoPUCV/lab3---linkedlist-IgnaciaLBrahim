@@ -47,7 +47,7 @@ void * nextList(List * list) {
   {
     return NULL;
   }
-  list->current = current->next;
+  list->current = list->current->next;
   return list->current;
 }
 
@@ -115,7 +115,7 @@ void * popCurrent(List * list) {
   {
     if (list->current == list->head)
     {
-      temp = list->head->data;
+      void * temp = list->head->data;
       list->head = NULL;
       list->tail = NULL;
       list->current = NULL;
@@ -123,7 +123,7 @@ void * popCurrent(List * list) {
     }
     else
     {
-      temp = list->current->data;
+      void * temp = list->current->data;
       list->current->prev->next = list->current->next;
       list->current->next->prev = list->current->prev;
       list->current = list->current->next;
