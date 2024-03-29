@@ -63,6 +63,7 @@ void * lastList(List * list) {
     return NULL;
   }
   void * temp = list->tail->data;
+  list->current = list->tail;
     return temp;
 }
 
